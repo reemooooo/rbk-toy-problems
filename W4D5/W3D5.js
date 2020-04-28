@@ -41,15 +41,45 @@ var input = 'check out how interesting this problem is, it\'s insanely interesti
 var output = flipPairs(input);
 console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei ,si 't sniasenyli tnreseitgn!
 */
-function flipPairs(string){
-	var array = string.split(' ').reverse()
-	var word = " "
-    console.log(array)
-	var result = []
-	for (var i=0 ; i<array.length ; i++){
-        result.push(array[i])
-	}
-	return result.join('')
+function each(coll, f) {
+  if (Array.isArray(coll)) { 
+    for (var i = 0; i < coll.length; i++) { 
+      f(coll[i], i); //it will be called for each element
+    } 
+  } else { 
+     for (var key in coll) { 
+       f(coll[key], key); 
+     } 
+   } 
+ }
+
+function map(array, f) {
+  var acc=[]
+  each(array,function(element,i){//return element**2
+    acc.push(f(element,i))
+  })
+  return acc
 }
+
+function  reverseString (string){
+  var array = string.split('').reverse()
+ // console.log(array)
+  var x = array.length-1
+  var result = map(array,function(element,i){
+     return element
+
+   })
+  return result.join('')
+}
+function  flipPairs (string){
+   var array = string.split(' ')
+   var result=map(array,function(element,i){
+     return reverseString(element)
+   })
+   return result.join(' ')
+}
+
+
+
 
 
