@@ -10,7 +10,7 @@ Hint: Recall typeof? If not: check it out on MDN. :-)
 function countNumOfStrings(array){
 	var count = 0;
 	for (var i=0 ; i<array.length ; i++){
-		if(typeof(array[i]) === 'string'){
+		if(count(array[i]) === 'string'){
            count++;
 		}
 	}
