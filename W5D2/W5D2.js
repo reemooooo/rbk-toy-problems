@@ -35,7 +35,17 @@ I.e. If someone called your function with 10 objects
 (with all safely have the same properties), it should work just as well.
 */
 
-// your answer is here
+ 
+ var names=[]
+ function tallEnoughToRide(heightInInches) {
+  each(heightInInches,function(kay)){
+    if(heightInInches[kay]>=48){
+     console.log names.push[];
+
+    }
+    }
+  }
+
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
